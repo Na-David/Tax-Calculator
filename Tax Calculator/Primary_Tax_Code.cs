@@ -8,6 +8,8 @@ namespace Tax_Calculator
 {
     class Primary_Tax_Code
     {
+        Secondary_Tax_Code second_tax_code = new Secondary_Tax_Code();
+
         bool Tax_M = false;
         bool Tax_ME = false;
         bool Tax_MESL = false;
@@ -35,6 +37,7 @@ namespace Tax_Calculator
                 else if (tested_benefit2 == 2)
                 {
                     // secondary income
+                    second_tax_code.secondary_income_tax_code();
                 }
             }
             else if (tested_benefit == 2)
@@ -76,12 +79,14 @@ namespace Tax_Calculator
                                 {
                                     Console.Clear();
                                     Console.WriteLine("Your tax code is ME SL");
+                                    Console.ReadKey();
                                     Tax_MESL = true;
                                 }
                                 else if (loan == 2)
                                 {
                                     Console.Clear();
                                     Console.WriteLine("Your tax code is ME");
+                                    Console.ReadKey();
                                     Tax_ME = true;
                                 }
                             }
@@ -96,12 +101,14 @@ namespace Tax_Calculator
                                 {
                                     Console.Clear();
                                     Console.WriteLine("Your tax code is M SL");
+                                    Console.ReadKey();
                                     Tax_MSL = true;
                                 }
                                 else if (loan == 2)
                                 {
                                     Console.Clear();
                                     Console.WriteLine("Your tax code is M");
+                                    Console.ReadKey();
                                     Tax_M = true;
                                 }
 
@@ -118,12 +125,14 @@ namespace Tax_Calculator
                             {
                                 Console.Clear();
                                 Console.WriteLine("Your tax code is M SL");
+                                Console.ReadKey();
                                 Tax_MSL = true;
                             }
                             else if (loan == 2)
                             {
                                 Console.Clear();
                                 Console.WriteLine("Your tax code is M");
+                                Console.ReadKey();
                                 Tax_M = true;
                             }
 
@@ -140,12 +149,14 @@ namespace Tax_Calculator
                         {
                             Console.Clear();
                             Console.WriteLine("Your tax code is M SL");
+                            Console.ReadKey();
                             Tax_MSL = true;
                         }
                         else if (loan == 2)
                         {
                             Console.Clear();
                             Console.WriteLine("Your tax code is M");
+                            Console.ReadKey();
                             Tax_M = true;
                         }
                     }
@@ -153,16 +164,8 @@ namespace Tax_Calculator
                 else if (highest_income == 2)
                 {
                     // secondary income
+                    second_tax_code.secondary_income_tax_code();
                 }
-            }
-
-
-
-
-            ConsoleKeyInfo CKI = Console.ReadKey();
-            switch (CKI.Key)
-            {
-
             }
 
         }
