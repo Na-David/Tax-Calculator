@@ -17,14 +17,15 @@ namespace Tax_Calculator
         {
             Primary_Tax_Code Primary_Code = new Primary_Tax_Code();
             Secondary_Tax_Code Secondary_Code = new Secondary_Tax_Code();
+            Tax_Payable Tax_payable = new Tax_Payable();
 
             Console.WriteLine("**********************************************");
             Console.WriteLine("*************** Tax Calculator ***************");
             Console.WriteLine("**********************************************");
             Console.WriteLine("");
 
+             Primary_Code.primary_income_tax_code();
 
-            Primary_Code.primary_income_tax_code();
 
             Console.WriteLine("Do you have a secondary income source?");
             Console.WriteLine("1. Yes 2. No");
@@ -35,8 +36,11 @@ namespace Tax_Calculator
                 Secondary_Code.secondary_income_tax_code();
             } else if (secondary_income_source == 2)
             {
-                // calculate right away?
+                Tax_payable.tax_payable();
             }
+
+            /////////////////////////////////////////////////////
+
         }
     }
 }
